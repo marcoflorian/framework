@@ -5,6 +5,11 @@ set -x
 
 CURRENT_BRANCH="8.x"
 
+function split2()
+{
+    SHA1=`./bin/splitsh-lite --prefix=$1`
+    git push
+
 function split()
 {
     SHA1=`./bin/splitsh-lite --prefix=$1`
